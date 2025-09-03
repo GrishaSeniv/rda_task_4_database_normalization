@@ -42,12 +42,12 @@ VALUES (1, 'Country1');
 INSERT INTO Countries (ID, Name)
 VALUES (2, 'Country2');
 
-INSERT INTO Product (ID, Name)
+INSERT INTO Products (ID, Name)
 VALUES (1, 'AwersomeProduct');
 
-INSERT INTO Warehouse (ID, Name, City, Street, CountryID)
+INSERT INTO Warehouses (ID, Name, City, Street, CountryID)
 VALUES (1, 'Warehouse-1', 'City-1', 'Street-1', 1);
-INSERT INTO Warehouse (ID, Name, City, Street, CountryID)
+INSERT INTO Warehouses (ID, Name, City, Street, CountryID)
 VALUES (2, 'Warehouse-2', 'City-2', 'Street-2', 2);
 
 INSERT INTO ProductInventory (WarehouseAmount, WarehouseID, ProductID)
