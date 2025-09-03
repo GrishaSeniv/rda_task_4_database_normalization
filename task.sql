@@ -9,16 +9,6 @@ CREATE TABLE Countries (
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE ProductInventory (
-    ID              INT AUTO_INCREMENT,
-    WarehouseAmount INT,
-    WarehouseID     INT,
-    ProductID       INT,
-    FOREIGN KEY (WarehouseID) REFERENCES Warehouse (ID) ON DELETE NO ACTION,
-    FOREIGN KEY (ProductID) REFERENCES Product (ID) ON DELETE NO ACTION,
-    PRIMARY KEY (ID)
-);
-
 CREATE TABLE Product (
     ID   INT,
     Name VARCHAR(50),
@@ -32,6 +22,16 @@ CREATE TABLE Warehouse (
     Street    VARCHAR(50),
     CountryID INT,
     FOREIGN KEY (CountryID) REFERENCES Countries (ID) ON DELETE NO ACTION,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE ProductInventory (
+    ID              INT AUTO_INCREMENT,
+    WarehouseAmount INT,
+    WarehouseID     INT,
+    ProductID       INT,
+    FOREIGN KEY (WarehouseID) REFERENCES Warehouse (ID) ON DELETE NO ACTION,
+    FOREIGN KEY (ProductID) REFERENCES Product (ID) ON DELETE NO ACTION,
     PRIMARY KEY (ID)
 );
 
