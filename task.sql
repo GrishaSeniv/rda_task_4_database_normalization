@@ -1,5 +1,5 @@
 -- Create database and tables
-
+DROP DATABASE IF EXISTS ShopDB;
 CREATE DATABASE ShopDB;
 USE ShopDB;
 
@@ -27,7 +27,7 @@ CREATE TABLE Warehouses (
 
 CREATE TABLE ProductInventory (
     ID              INT AUTO_INCREMENT,
-    WarehouseAmount INT NOT NULL,
+    WarehouseAmount INT UNSIGNED NOT NULL,
     WarehouseID     INT,
     ProductID       INT,
     FOREIGN KEY (WarehouseID) REFERENCES Warehouses (ID) ON DELETE NO ACTION,
